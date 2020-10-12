@@ -64,11 +64,6 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-#define    BLINKY_DEMO       0
-#define    FULL_DEMO         1
-#define    ECHO_CLIENT_DEMO  2
-
-#define mainSELECTED_APPLICATION BLINKY_DEMO
 
 /* This demo uses heap_3.c (the libc provided malloc() and free()). */
 
@@ -110,8 +105,8 @@ StackType_t uxTimerTaskStack[ configTIMER_TASK_STACK_DEPTH ];
 
 int main( void )
 {
-	solution();
-	
+	//taskTest();
+	queueTest();
 	return 0;
 }
 /*-----------------------------------------------------------*/
@@ -171,12 +166,6 @@ void vApplicationTickHook( void )
 	added here, but the tick hook is called from an interrupt context, so
 	code must not attempt to block, and only the interrupt safe FreeRTOS API
 	functions can be used (those that end in FromISR()). */
-
-	#if (mainSELECTED_APPLICATION == FULL_DEMO )
-	{
-		vFullDemoTickHookFunction();
-	}
-	#endif /* mainSELECTED_APPLICATION */
 }
 
 void vLoggingPrintf( const char *pcFormat,

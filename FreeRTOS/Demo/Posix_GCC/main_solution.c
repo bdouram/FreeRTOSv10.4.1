@@ -149,7 +149,7 @@ static void prvKeyboard(void *pvParameters)
         refAngle = (uint16_t)atoi(refAngleString);
 
         if(refAngle != 0){
-            console_print("Angle is: %d\n", refAngle);
+            console_print("Keyboard string are: %d\n", refAngle);
             refAngle = 0;
             refAngleString[0] = '\0';
             refAngleString[1] = '\0';
