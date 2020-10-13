@@ -16,8 +16,8 @@ static void prvProducer(void *pvParameters);
 static void prvConsumer(void *pvParameters);
 
 /* Task Priorities */
-#define prioPRODUCER (tskIDLE_PRIORITY + 4) // Low Priority
-#define prioCONSUMER (tskIDLE_PRIORITY + 3) // High Priority
+#define prioPRODUCER (tskIDLE_PRIORITY + 4) // HIgh Priority
+#define prioCONSUMER (tskIDLE_PRIORITY + 3) // Low Priority
 
 /* Some definitions */
 #define TRUE 1

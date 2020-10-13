@@ -105,8 +105,7 @@ StackType_t uxTimerTaskStack[ configTIMER_TASK_STACK_DEPTH ];
 
 int main( void )
 {
-	//taskTest();
-	queueTest();
+	eventGroupsTest();
 	return 0;
 }
 /*-----------------------------------------------------------*/

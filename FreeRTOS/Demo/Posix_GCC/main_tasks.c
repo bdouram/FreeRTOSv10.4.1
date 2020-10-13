@@ -17,7 +17,7 @@ static void prvTaskB(void *pvParameters);
 #define TRUE 1
 #define FALSE 0
 
-#define isPeriodic FALSE
+#define isPeriodic TRUE
 
 #if isPeriodic == TRUE
 #define pTaskA pdMS_TO_TICKS(1000);
